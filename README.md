@@ -4,8 +4,8 @@ It is created using Structured Query Language (SQL). I'm using an open source
 database engine SQLite (version 3.x.x) to manage it.
 
 ## Why Do It
-When I was an MSc student, I found many paleomagnetic data were published in
-only Chinese. Why not share them with a "Hello, World!".
+Many paleomagnetic data were published only in Chinese. So why not share them
+with a "Hello, World!".
 
 ## Initial Idea
 This small database will include two versions. One contains data from the
@@ -18,3 +18,7 @@ I'm referring to GPMDB4.6b's schema. Please [click here][1] for more details
 about GPMDB4.6b.
 
 [1]: https://confluence.csiro.au/display/cmfr/Palaeomagnetism+and+Rock+Magnetism
+
+### Tables
+#### PMAGRESULT
+#### REFERENCE

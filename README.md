@@ -21,4 +21,19 @@ about GPMDB4.6b.
 
 ### Tables
 #### PMAGRESULT
+This table contains information on the palaeomagnetic result. Its COLUMNS
+include ROCKUNITNO, RESULTNO, LOMAGAGE, HIMAGAGE, TESTS, TILT, SLAT, SLONG, B,
+N, DEC, INC, KD, ED95, PLAT, PLONG, PTYPE, DP, DM, NOREVERSED, ANTIPODAL,
+N_NORM, D_NORM, I_NORM, K_NORM, ED_NORM, N_REV, D_REV, I_REV, K_REV, ED_REV,
+DEMAGCODE, TREATMENT, LABDETAILS, ROCKMAG, N_TILT, D_UNCOR, I_UNCOR, K1, ED1,
+D_COR, I_COR, K2, ED2, STATUS, COMPONENT, COMMENTS
+
 #### REFERENCE
+This table contains information on the literature where the palaeomagnetic data
+was published. Its COLUMNS include REFNO, AUTHORS, AUTHORS_cn, YEAR, VOLUME,
+TITLE, TITLE_cn, REMARKS, VPAGES, JOURNAL, JOURNAL_cn
+
+#### TERRANE
+This table contains information on terrane name which has been mentioned by
+the author, and also the corresponding continent where the terrane is located.
+So its COLUMNS include CONTINENT and TERRANE.

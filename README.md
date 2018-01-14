@@ -30,7 +30,11 @@ D_COR, I_COR, K2, ED2, STATUS, COMPONENT, COMMENTS
 
 #### REFERENCE
 This table contains information on the literature where the palaeomagnetic data
-was published. Its COLUMNS include REFNO, AUTHORS, AUTHORS_cn, YEAR, VOLUME,
+was published. Its COLUMNS include
+
+REFNO (In GPMDB4.6b, it is 4 digit primary key to link AUTHORS, REFERENCE, ROCKUNIT; Here it is 6 digit primary key to link AUTHORS, REFERENCE, ROCKUNIT, and its first 2 digits are always 86, which is named after China's country code 86),
+
+AUTHORS, AUTHORS_cn, YEAR, VOLUME,
 TITLE, TITLE_cn, REMARKS, VPAGES, JOURNAL, JOURNAL_cn
 
 #### TERRANE

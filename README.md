@@ -1,11 +1,19 @@
-# Paleomagnetic_Data_from_Chinese_Literature
+# Paleomagnetic_Data_from_Chinese_Literature (暂用此命名该数据库)
 This database is a compilation of paleomagnetic data from Chinese literature.
 It is created using Structured Query Language (SQL). I'm using an open source
 database engine SQLite (version 3.x.x) to manage it.
 
-## Why Do It
+该数据库收集归纳中文文献里发表的古地磁极数据。数据库的创建和管理基于SQL语言。我
+这里用的是开源SQL数据库管理软件包SQLite。
+
+## Why Do It (创建该数据库的缘由)
 Many paleomagnetic data were published only in Chinese. So why not share them
 with a "Hello, World!".
+
+在我读硕士期间，科研涉及到很多塔里木板块的板块构造历史和古地磁数据。当时我发现很
+多古地磁数据（当然应该是100%关于中国范围内的板块、地块、地体的古地磁）是发表在中
+文学术期刊内的，因此未能被归纳到GPMDB（英文世界里的“全球古地磁数据库”）。我觉得这
+样没能和世界分享挺可惜的，所以才有了这个想法，但至今才得以实施。
 
 ## Initial Idea
 This small database will include two versions. One contains data from the

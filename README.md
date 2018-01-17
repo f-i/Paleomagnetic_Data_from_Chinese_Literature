@@ -30,26 +30,58 @@ about GPMDB4.6b.
 ### Tables
 #### PMAGRESULT
 This table contains information on the palaeomagnetic result. Its COLUMNS
-include ROCKUNITNO, RESULTNO, LOMAGAGE, HIMAGAGE, TESTS, TILT, SLAT, SLONG,
+include
+
+ROCKUNITNO (4 digit primary key to link ROCKUNIT and PMAGRESULT),
+
+RESULTNO (4 digit primary key to link PMAGRESULT, ALTRESULT etc),
+
+LOMAGAGE (),
+
+HIMAGAGE, TESTS, TILT, SLAT, SLONG,
 
 B (Number of sites),
 
-N, DEC, INC, KD, ED95,
+N (Number of samples),
+
+DEC, INC, KD, ED95,
 
 PLAT (Latitude of Paleomagnetic Pole Position),
 
 PLONG (Longitude of Paleomagnetic Pole Position),
 
-PTYPE, DP, DM, NOREVERSED, ANTIPODAL,
-N_NORM, D_NORM, I_NORM, K_NORM, ED_NORM, N_REV, D_REV, I_REV, K_REV, ED_REV,
-DEMAGCODE, TREATMENT, LABDETAILS, ROCKMAG, N_TILT, D_UNCOR, I_UNCOR, K1, ED1,
+PTYPE (D=pole calculated from DEC,INC; V=pole calculated from VGPs),
+
+DP, DM,
+
+NOREVERSED (Percent of Reversed directions of magnetization),
+
+ANTIPODAL (Angle between the mean Normal and mean Reversed directions),
+
+N_NORM (Number of Normal directions),
+
+N_REV (Number of Reversed directions),
+
+D_NORM, I_NORM, K_NORM, ED_NORM,
+
+D_REV, I_REV, K_REV, ED_REV,
+DEMAGCODE, TREATMENT, LABDETAILS,
+
+ROCKMAG (Rock magnetic data with symbols OP,Js-T,IRM,SUSC,AN,Hc etc),
+
+N_TILT (Number used for means before and after structural correction),
+
+D_UNCOR, I_UNCOR, K1, ED1,
 D_COR, I_COR, K2, ED2, STATUS, COMPONENT, COMMENTS
 
 #### REFERENCE
 This table contains information on the literature where the palaeomagnetic data
 was published. Its COLUMNS include
 
-REFNO (In GPMDB4.6b, it is 4 digit primary key to link AUTHORS, REFERENCE, ROCKUNIT; Here it is 6 digit primary key to link AUTHORS, REFERENCE, ROCKUNIT, and its first 2 digits are always 86, which is named after China's country code 86),
+REFNO (In GPMDB4.6b, it is 4 digit primary key to link AUTHORS, REFERENCE, and
+ROCKUNIT; For the data compiled here it becomes 6 digit primary key to link
+AUTHORS, REFERENCE, ROCKUNIT, and its first 2 digits are always 8 and 6, which
+is named after China's country code 86),
 
 AUTHORS, AUTHORS_cn, YEAR, VOLUME,
 TITLE, TITLE_cn, REMARKS, VPAGES, JOURNAL, JOURNAL_cn

@@ -38,21 +38,38 @@ RESULTNO (4 digit primary key to link PMAGRESULT, ALTRESULT etc),
 
 LOMAGAGE (),
 
-HIMAGAGE, TESTS, TILT, SLAT, SLONG,
+HIMAGAGE,
+
+TESTS (Various stability tests symbols R,M,C,C*,G,G*,F,F*,Fs,U,N),
+
+TILT (Percent tilt correction [usually 0 or 100, except synfold]),
+
+SLAT, SLONG,
 
 B (Number of sites),
 
 N (Number of samples),
 
-DEC, INC, KD, ED95,
+DEC (Remanence Declination east of true north 磁偏角),
 
-PLAT (Latitude of Paleomagnetic Pole Position),
+INC (Remanence Inclination, i.e. Inclination of mean direction of magnetization
+磁倾角),
 
-PLONG (Longitude of Paleomagnetic Pole Position),
+KD (Fisher precision parameter for mean direction),
+
+ED95 (Radius of Circle of 95% confidence about mean direction, i.e. \alpha95),
+
+PLAT (Latitude of Paleomagnetic Pole [VGP] Position),
+
+PLONG (Longitude of Paleomagnetic Pole [VGP] Position),
 
 PTYPE (D=pole calculated from DEC,INC; V=pole calculated from VGPs),
 
-DP, DM,
+DP (half-angle of the confidence on the VGP in the direction of the
+palaeomeridian, i.e. semi-axis of oval of 95% confidence about Pole Position),
+
+DM (half-angle of the confidence on the VGP perpendicular to the palaeomeridian,
+i.e. the other semi-axis of oval of 95% confidence about Pole Position),
 
 NOREVERSED (Percent of Reversed directions of magnetization),
 
@@ -65,14 +82,26 @@ N_REV (Number of Reversed directions),
 D_NORM, I_NORM, K_NORM, ED_NORM,
 
 D_REV, I_REV, K_REV, ED_REV,
-DEMAGCODE, TREATMENT, LABDETAILS,
 
-ROCKMAG (Rock magnetic data with symbols OP,Js-T,IRM,SUSC,AN,Hc etc),
+DEMAGCODE (Number in the range 0-5 describing cleaning procedures used),
+
+TREATMENT (Treatment with symbols A [alternating field treatment], T [thermal
+treatment], H [chemical treatment], N [no treatment]),
+
+LABDETAILS,
+
+ROCKMAG (Rock magnetic data with symbols OP [Opaques from reflected light],
+Js-T [Thermomagnetic saturation magnetization vs temperature data],
+IRM [Isothermal remanent magnetization (with saturation field)],
+SUSC [Susceptibility], AN [Anisotropy], Hc [Coercivity of remanence] etc),
 
 N_TILT (Number used for means before and after structural correction),
 
-D_UNCOR, I_UNCOR, K1, ED1,
-D_COR, I_COR, K2, ED2, STATUS, COMPONENT, COMMENTS
+D_UNCOR, I_UNCOR, K1,
+
+ED1, ED2 (Circle of 95% confidence before, after structural correction),
+
+D_COR, I_COR, K2, STATUS, COMPONENT, COMMENTS
 
 #### REFERENCE
 This table contains information on the literature where the palaeomagnetic data
@@ -90,3 +119,8 @@ TITLE, TITLE_cn, REMARKS, VPAGES, JOURNAL, JOURNAL_cn
 This table contains information on terrane name which has been mentioned by
 the author, and also the corresponding continent where the terrane is located.
 So its COLUMNS include CONTINENT and TERRANE.
+
+## References
+
+1. http://www.ngu.no/geodynamics/gpmdb/ (please note that this website is down
+   now)

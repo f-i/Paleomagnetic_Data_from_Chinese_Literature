@@ -38,15 +38,20 @@ include
 
 * LOMAGAGE (),
 
-* HIMAGAGE,
+* HIMAGAGE (),
 
-* TESTS (Various stability tests symbols R,M,C,C*,G,G*,F,F*,Fs,U,N),
+* TESTS (Various stability tests symbols R [Reversals test with subscripts
+  a,b,c - see documentation], M [Rock magnetic tests], C [baked contact test],
+  C* [inverse contact test], G [conglomerate test], G* [intraformational
+  conglomerate test], F [fold test], F* [synfold test], Fs [fold test + strain
+  removal], U [Unconformity test], N [no tests]),
 
 * TILT (Percent tilt correction [usually 0 or 100, except synfold]),
 
-* SLAT,
+* SLAT (Latitude of site position for calculating the pole position),
 
-* SLONG,
+* SLONG (Longitude of site position for calculating the pole position; lies in
+  the range -180.0 to +180.0),
 
 * B (Number of sites),
 
@@ -54,8 +59,8 @@ include
 
 * DEC (Remanence Declination east of true north 磁偏角),
 
-* INC (Remanence Inclination, i.e. Inclination of mean direction of magnetization
-磁倾角),
+* INC (Remanence Inclination, i.e. Inclination of mean direction of
+  magnetization 磁倾角),
 
 * KD (Fisher precision parameter for mean direction),
 
@@ -63,15 +68,18 @@ include
 
 * PLAT (Latitude of Paleomagnetic Pole [VGP] Position),
 
-* PLONG (Longitude of Paleomagnetic Pole [VGP] Position),
+* PLONG (Longitude of Paleomagnetic Pole [VGP] Position; in the range 0.0 to
+  360.0),
 
-* PTYPE (D=pole calculated from DEC,INC; V=pole calculated from VGPs),
+* PTYPE (How the pole was calculated: D=pole calculated from mean DEC,INC;
+  V=pole calculated from VGPs [mean VGP] [in this case DP = DM = EP95]),
 
 * DP (half-angle of the confidence on the VGP in the direction of the
-palaeomeridian, i.e. semi-axis of oval of 95% confidence about Pole Position),
+  palaeomeridian, i.e. semi-axis of oval of 95% confidence about Pole Position),
 
-* DM (half-angle of the confidence on the VGP perpendicular to the palaeomeridian,
-i.e. the other semi-axis of oval of 95% confidence about Pole Position),
+* DM (half-angle of the confidence on the VGP perpendicular to the
+  palaeomeridian, i.e. the other semi-axis of oval of 95% confidence about Pole
+  Position),
 
 * NOREVERSED (Percent of Reversed directions of magnetization),
 
@@ -83,23 +91,31 @@ i.e. the other semi-axis of oval of 95% confidence about Pole Position),
 
 * D_NORM (Declination of mean Normal directions),
 
-* I_NORM, K_NORM, ED_NORM,
+* I_NORM (Inclination of mean Normal directions),
+
+* K_NORM (Fisher precision parameter for Normal directions),
+
+* ED_NORM (Circle of 95% confidence about Normal directions),
 
 * D_REV (Declination of mean Reversed directions),
 
-* I_REV, K_REV, ED_REV,
+* I_REV (Inclination of mean Reversed directions),
+
+* K_REV (Fisher precision parameter for Reversed directions),
+
+* ED_REV (Circle of 95% confidence about Reversed directions),
 
 * DEMAGCODE (Number in the range 0-5 describing cleaning procedures used),
 
 * TREATMENT (Treatment with symbols A [alternating field treatment], T [thermal
-treatment], H [chemical treatment], N [no treatment]),
+  treatment], H [chemical treatment], N [no treatment]),
 
 * LABDETAILS,
 
 * ROCKMAG (Rock magnetic data with symbols OP [Opaques from reflected light],
-Js-T [Thermomagnetic saturation magnetization vs temperature data],
-IRM [Isothermal remanent magnetization (with saturation field)],
-SUSC [Susceptibility], AN [Anisotropy], Hc [Coercivity of remanence] etc),
+  Js-T [Thermomagnetic saturation magnetization vs temperature data],
+  IRM [Isothermal remanent magnetization (with saturation field)],
+  SUSC [Susceptibility], AN [Anisotropy], Hc [Coercivity of remanence] etc),
 
 * N_TILT (Number used for means before and after structural correction),
 
@@ -107,7 +123,7 @@ SUSC [Susceptibility], AN [Anisotropy], Hc [Coercivity of remanence] etc),
 
 * I_UNCOR (Inclination before correction for structure),
 
-* K1,
+* K1 (Fisher precision parameter before structure correction),
 
 * ED1, ED2 (Circle of 95% confidence before, after structural correction),
 
@@ -115,16 +131,20 @@ SUSC [Susceptibility], AN [Anisotropy], Hc [Coercivity of remanence] etc),
 
 * I_COR (Inclination after correction for structure),
 
-* K2, STATUS, COMPONENT, COMMENTS
+* K2 (Fisher precision parameter after structure correction),
+
+* STATUS (Indicates if results have been superseded),
+
+* COMPONENT, COMMENTS
 
 #### REFERENCE
 This table contains information on the literature where the palaeomagnetic data
 was published. Its COLUMNS include
 
 * REFNO (In GPMDB4.6b, it is 4 digit primary key to link AUTHORS, REFERENCE, and
-ROCKUNIT; For the data compiled here it becomes 6 digit primary key to link
-AUTHORS, REFERENCE, ROCKUNIT, and its first 2 digits are always 8 and 6, which
-is named after China's country code 86),
+  ROCKUNIT; For the data compiled here it becomes 6 digit primary key to link
+  AUTHORS, REFERENCE, ROCKUNIT, and its first 2 digits are always 8 and 6, which
+  is named after China's country code 86),
 
 * AUTHORS,
 
@@ -145,6 +165,47 @@ is named after China's country code 86),
 * JOURNAL,
 
 * JOURNAL_cn (Journal name in Chinese)
+
+#### ROCKUNIT
+This table contains information on the sampled rockunit, e.g. position, geology,
+age, structure. Its COLUMNS include:
+
+* REFNO (link with REFERENCE table),
+
+* ROCKUNITNO (link with PMAGRESULT table),
+
+* ROCKNAME (Rock name),
+
+* PLACE (Location of investigation including name of country),
+
+* CONTINENT,
+
+* TERRANE,
+
+* RLAT (Latitude of the rockunit),
+
+* RLONG (Longitude of the rockunit),
+
+* ROCKTYPE,
+
+* STRATA (Stratigraphic information such as "Visean"),
+
+* STRATAGE (Stratigraphic age using common symbols as listed in TIMESCALE table),
+
+* LATSPREAD (Latitudinal spread of rock unit),
+
+* LOWAGE (Numerical lower age limit),
+
+* HIGHAGE (Numerical upper age limit),
+
+* METHOD (Basis upon which LOWAGE and HIGHAGE values have been derived),
+
+* STATUS (Indicates the results have been superseded),
+
+* ISOTOPEDATA (Isotopic age information),
+
+* STRUCTURE (Comments on strikes and dips of bedding or the age of folding or
+  metamorphism)
 
 #### TERRANE
 This table contains information on terrane name which has been mentioned by

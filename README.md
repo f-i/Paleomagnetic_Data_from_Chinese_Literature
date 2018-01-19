@@ -32,88 +32,119 @@ about GPMDB4.6b.
 This table contains information on the palaeomagnetic result. Its COLUMNS
 include
 
-ROCKUNITNO (4 digit primary key to link ROCKUNIT and PMAGRESULT),
+* ROCKUNITNO (4 digit primary key to link ROCKUNIT and PMAGRESULT),
 
-RESULTNO (4 digit primary key to link PMAGRESULT, ALTRESULT etc),
+* RESULTNO (4 digit primary key to link PMAGRESULT, ALTRESULT etc),
 
-LOMAGAGE (),
+* LOMAGAGE (),
 
-HIMAGAGE,
+* HIMAGAGE,
 
-TESTS (Various stability tests symbols R,M,C,C*,G,G*,F,F*,Fs,U,N),
+* TESTS (Various stability tests symbols R,M,C,C*,G,G*,F,F*,Fs,U,N),
 
-TILT (Percent tilt correction [usually 0 or 100, except synfold]),
+* TILT (Percent tilt correction [usually 0 or 100, except synfold]),
 
-SLAT, SLONG,
+* SLAT,
 
-B (Number of sites),
+* SLONG,
 
-N (Number of samples),
+* B (Number of sites),
 
-DEC (Remanence Declination east of true north 磁偏角),
+* N (Number of samples),
 
-INC (Remanence Inclination, i.e. Inclination of mean direction of magnetization
+* DEC (Remanence Declination east of true north 磁偏角),
+
+* INC (Remanence Inclination, i.e. Inclination of mean direction of magnetization
 磁倾角),
 
-KD (Fisher precision parameter for mean direction),
+* KD (Fisher precision parameter for mean direction),
 
-ED95 (Radius of Circle of 95% confidence about mean direction, i.e. \alpha95),
+* ED95 (Radius of Circle of 95% confidence about mean direction, i.e. \alpha95),
 
-PLAT (Latitude of Paleomagnetic Pole [VGP] Position),
+* PLAT (Latitude of Paleomagnetic Pole [VGP] Position),
 
-PLONG (Longitude of Paleomagnetic Pole [VGP] Position),
+* PLONG (Longitude of Paleomagnetic Pole [VGP] Position),
 
-PTYPE (D=pole calculated from DEC,INC; V=pole calculated from VGPs),
+* PTYPE (D=pole calculated from DEC,INC; V=pole calculated from VGPs),
 
-DP (half-angle of the confidence on the VGP in the direction of the
+* DP (half-angle of the confidence on the VGP in the direction of the
 palaeomeridian, i.e. semi-axis of oval of 95% confidence about Pole Position),
 
-DM (half-angle of the confidence on the VGP perpendicular to the palaeomeridian,
+* DM (half-angle of the confidence on the VGP perpendicular to the palaeomeridian,
 i.e. the other semi-axis of oval of 95% confidence about Pole Position),
 
-NOREVERSED (Percent of Reversed directions of magnetization),
+* NOREVERSED (Percent of Reversed directions of magnetization),
 
-ANTIPODAL (Angle between the mean Normal and mean Reversed directions),
+* ANTIPODAL (Angle between the mean Normal and mean Reversed directions),
 
-N_NORM (Number of Normal directions),
+* N_NORM (Number of Normal directions),
 
-N_REV (Number of Reversed directions),
+* N_REV (Number of Reversed directions),
 
-D_NORM, I_NORM, K_NORM, ED_NORM,
+* D_NORM (Declination of mean Normal directions),
 
-D_REV, I_REV, K_REV, ED_REV,
+* I_NORM, K_NORM, ED_NORM,
 
-DEMAGCODE (Number in the range 0-5 describing cleaning procedures used),
+* D_REV (Declination of mean Reversed directions),
 
-TREATMENT (Treatment with symbols A [alternating field treatment], T [thermal
+* I_REV, K_REV, ED_REV,
+
+* DEMAGCODE (Number in the range 0-5 describing cleaning procedures used),
+
+* TREATMENT (Treatment with symbols A [alternating field treatment], T [thermal
 treatment], H [chemical treatment], N [no treatment]),
 
-LABDETAILS,
+* LABDETAILS,
 
-ROCKMAG (Rock magnetic data with symbols OP [Opaques from reflected light],
+* ROCKMAG (Rock magnetic data with symbols OP [Opaques from reflected light],
 Js-T [Thermomagnetic saturation magnetization vs temperature data],
 IRM [Isothermal remanent magnetization (with saturation field)],
 SUSC [Susceptibility], AN [Anisotropy], Hc [Coercivity of remanence] etc),
 
-N_TILT (Number used for means before and after structural correction),
+* N_TILT (Number used for means before and after structural correction),
 
-D_UNCOR, I_UNCOR, K1,
+* D_UNCOR (Declination before correction for structure),
 
-ED1, ED2 (Circle of 95% confidence before, after structural correction),
+* I_UNCOR (Inclination before correction for structure),
 
-D_COR, I_COR, K2, STATUS, COMPONENT, COMMENTS
+* K1,
+
+* ED1, ED2 (Circle of 95% confidence before, after structural correction),
+
+* D_COR (Declination after correction for structure),
+
+* I_COR (Inclination after correction for structure),
+
+* K2, STATUS, COMPONENT, COMMENTS
 
 #### REFERENCE
 This table contains information on the literature where the palaeomagnetic data
 was published. Its COLUMNS include
 
-REFNO (In GPMDB4.6b, it is 4 digit primary key to link AUTHORS, REFERENCE, and
+* REFNO (In GPMDB4.6b, it is 4 digit primary key to link AUTHORS, REFERENCE, and
 ROCKUNIT; For the data compiled here it becomes 6 digit primary key to link
 AUTHORS, REFERENCE, ROCKUNIT, and its first 2 digits are always 8 and 6, which
 is named after China's country code 86),
 
-AUTHORS, AUTHORS_cn, YEAR, VOLUME,
-TITLE, TITLE_cn, REMARKS, VPAGES, JOURNAL, JOURNAL_cn
+* AUTHORS,
+
+* AUTHORS_cn (Authors' names in Chinese),
+
+* YEAR,
+
+* VOLUME,
+
+* TITLE,
+
+* TITLE_cn (Title in Chinese),
+
+* REMARKS,
+
+* VPAGES,
+
+* JOURNAL,
+
+* JOURNAL_cn (Journal name in Chinese)
 
 #### TERRANE
 This table contains information on terrane name which has been mentioned by
@@ -122,5 +153,5 @@ So its COLUMNS include CONTINENT and TERRANE.
 
 ## References
 
-1. http://www.ngu.no/geodynamics/gpmdb/ (please note that this website is down
+1. Part of the definitions of the above terms is from http://www.ngu.no/geodynamics/gpmdb/ (please note that this website is down
    now)

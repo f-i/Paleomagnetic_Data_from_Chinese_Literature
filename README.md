@@ -182,6 +182,22 @@ include
     * 'Data included in...' = the result is included in a combined pole
     * 'See...' = there is some reason to refer to another result in the database
 
+#### ALTRESULT
+This table contains palaeomagnetic results (alternative pole position)
+calculated in a different way from the main PMAGRESULT table. Its COLUMNS are
+
+* RESULTNO (link with PMAGRESULT table)
+
+* Pole position and statistics when derived from a mean VGP (if this
+  calculation is the only one given by the author then APLAT = PLAT, APLONG =
+  PLONG and DP = DM = EP95 from the PMAGRESULT table):
+  * APLAT (Pole Latitude calculated from the mean VGP)
+  * APLONG (Pole Longitude calculated from the mean VGP)
+  * KP (Fisher precision parameter for mean VGP)
+  * EP95 (A95? Radius of circle of 95% confidence about Pole position; see Tauxe
+    et al. 2005 Chp 7; Domeier et al. 2012)
+
+
 #### REFERENCE
 This table contains information on the literature where the palaeomagnetic data
 was published. Its COLUMNS include
@@ -223,15 +239,16 @@ age, structure. Its COLUMNS include:
 
 * PLACE (Location of investigation including name of country),
 
-* CONTINENT,
+* CONTINENT (in GPMDB4.6b, it was one of 12 present-day continents; here it is
+  one of plates/blocks/terranes in east asia or even broader area),
 
-* TERRANE,
+* TERRANE (Terrane name where this has been mentioned by the author),
 
 * RLAT (Latitude of the rockunit),
 
 * RLONG (Longitude of the rockunit),
 
-* ROCKTYPE,
+* ROCKTYPE (One of four possible rock types),
 
 * STRATA (Stratigraphic information such as "Visean"),
 

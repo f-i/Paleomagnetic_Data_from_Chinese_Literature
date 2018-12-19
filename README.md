@@ -83,8 +83,9 @@ include
   * PLONG (Longitude of Paleomagnetic Pole [VGP] Position; in the range 0.0 to
     360.0),
 
-  * PTYPE (How the pole was calculated: D=pole calculated from mean DEC,INC;
-    V=pole calculated from VGPs [mean VGP] [in this case DP = DM = EP95]),
+  * PTYPE (How the pole was calculated: D indicates pole calculated from mean
+    DEC,INC; V indicates pole calculated from VGPs [mean VGP] [in this case
+    DP=DM=EP95]),
 
   * Error parameters on the pole position (in degrees):
 
@@ -135,10 +136,11 @@ include
 
   * TREATMENT 退磁处理方法 (Demagnetisation Treatment with symbols A
     [AF treatment], T [thermal treatment], H [chemical treatment], N [no
-    demagnetisation treatment]),
+    demagnetisation treatment], V indicates temporary cleaning used (Soviet
+    Data)),
 
-  * LABDETAILS (Information such as maximum AF field or temperature used for pilot
-    test purposes),
+  * LABDETAILS (Information such as maximum AF field or temperature used for
+    pilot test purposes),
 
   * ROCKMAG (Summary of basic rock magnetic data studies, with symbols OP
     [Opaques from reflected light where MAGN = magnetite, MAGH = maghemite, TM =
@@ -193,7 +195,8 @@ calculated in a different way from the main PMAGRESULT table. Its COLUMNS are
   PLONG and DP = DM = EP95 from the PMAGRESULT table):
   * APLAT (Pole Latitude calculated from the mean VGP)
   * APLONG (Pole Longitude calculated from the mean VGP)
-  * KP (Fisher precision parameter for mean VGP)
+  * KP (Fisher precision parameter for mean VGP; Watch [this video][1] showing
+    how dispersion behaves for different Fisher precision parameter)
   * EP95 (A95? Radius of circle of 95% confidence about Pole position; see Tauxe
     et al. 2005 Chp 7; Domeier et al. 2012)
 
@@ -276,5 +279,7 @@ So its COLUMNS include CONTINENT and TERRANE.
 
 ## References
 
-1. Part of the definitions of the above terms is from http://www.ngu.no/geodynamics/gpmdb/ (please note that this website is down
-   now)
+1. Part of the definitions of the above terms is from the website http://www.ngu.no/geodynamics/gpmdb/,
+   which is now closed.
+
+[1]: https://youtu.be/hu-3U-jSQME

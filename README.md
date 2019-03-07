@@ -54,11 +54,11 @@ include
     [Reversals test with subscripts a,b,c - see documentation;
     Ra,Rb,Rc,Rai,Rbi,Rci - see McFadden, 1990], M [Rock magnetic tests], C
     [baked contact test], C* [inverse contact test], G [conglomerate test], G*
-    [intraformational conglomerate test]. F [fold test], F* [synfold test], Fs
-    [fold test + strain removal], Details of field tests are given in the
-    FIELDTEST table. U [Unconformity test (after Kirschvink)], N [no tests],
-    where "+", "-" or "o" are used to indicate positive, negative or
-    inconclusive 不确定的 tests),
+    [intraformational conglomerate test]. F [fold test, also called tilt test
+    or bedding-tilt test], F* [synfold test], Fs [fold test + strain removal],
+    Details of field tests are given in the FIELDTEST table. U [Unconformity
+    test (after Kirschvink)], N [no tests], where "+", "-" or "o" are used to
+    indicate positive, negative or inconclusive 不确定的 tests),
 
   * TILT (Percentage tilt correction applied [usually 0 or 100, except synfold]),
 

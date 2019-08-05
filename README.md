@@ -51,14 +51,14 @@ include
     magnetisation component),
 
   * TESTS (Various stability tests, designated by the following symbols R
-    [Reversals test with subscripts a,b,c - see documentation; Ra,Rb,Rc,Rai,Rbi,
-    Rci - see McFadden and McElhinny, 1990], M [Rock magnetic tests], C [baked
-    contact test], C* [inverse contact test], G [conglomerate test], G*
-    [intraformational conglomerate test]. F [fold test, also called tilt test
-    or bedding-tilt test], F* [synfold test], Fs [fold test + strain removal],
-    Details of field tests are given in the FIELDTEST table. U [Unconformity
-    test (after Kirschvink)], N [no tests], where "+", "-" or "o" are used to
-    indicate positive, negative or inconclusive 不确定的 tests),
+    [Reversals test with subscripts a,b,c: Ra,Rb,Rc,Rai,Rbi,Rci - see McFadden
+    and McElhinny, 1990], M [Rock magnetic tests], C [baked contact test], C*
+    [inverse contact test], G [conglomerate test], G* [intraformational
+    conglomerate test]. F [fold test, also called tilt test or bedding-tilt
+    test], F* [synfold test], Fs [fold test + strain removal], Details of field
+    tests are given in the FIELDTEST table. U [Unconformity test (after
+    Kirschvink)], N [no tests], where "+", "-" or "o" are used to indicate
+    positive, negative or inconclusive 不确定的 tests),
 
   * TILT (Percentage tilt correction applied [usually 0 or 100, except synfold]),
 
@@ -195,7 +195,7 @@ calculated in a different way from the main PMAGRESULT table. Its COLUMNS are
   PLONG and DP = DM = EP95 from the PMAGRESULT table):
   * APLAT (Pole Latitude calculated from the mean VGP)
   * APLONG (Pole Longitude calculated from the mean VGP)
-  * KP (Fisher precision parameter for mean VGP; Watch [this video][1] showing
+  * KP (Fisher precision parameter for mean VGP; Watch [this video][2] showing
     how dispersion behaves for different Fisher precision parameter)
   * EP95 (A95? Radius of circle of 95% confidence about Pole position; see Tauxe
     et al. 2005 Chp 7; Domeier et al. 2012)
@@ -282,4 +282,4 @@ So its COLUMNS include CONTINENT and TERRANE.
 1. Part of the definitions of the above terms is from the website http://www.ngu.no/geodynamics/gpmdb/,
    which is now closed.
 
-[1]: https://youtu.be/hu-3U-jSQME
+[2]: https://youtu.be/hu-3U-jSQME

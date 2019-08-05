@@ -51,9 +51,9 @@ include
     magnetisation component),
 
   * TESTS (Various stability tests, designated by the following symbols R
-    [Reversals test with subscripts a,b,c - see documentation;
-    Ra,Rb,Rc,Rai,Rbi,Rci - see McFadden, 1990], M [Rock magnetic tests], C
-    [baked contact test], C* [inverse contact test], G [conglomerate test], G*
+    [Reversals test with subscripts a,b,c - see documentation; Ra,Rb,Rc,Rai,Rbi,
+    Rci - see McFadden and McElhinny, 1990], M [Rock magnetic tests], C [baked
+    contact test], C* [inverse contact test], G [conglomerate test], G*
     [intraformational conglomerate test]. F [fold test, also called tilt test
     or bedding-tilt test], F* [synfold test], Fs [fold test + strain removal],
     Details of field tests are given in the FIELDTEST table. U [Unconformity

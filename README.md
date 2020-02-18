@@ -6,6 +6,34 @@ database engine SQLite (version 3.x.x) to manage it.
 该数据库收集归纳中文文献里发表的古地磁极数据。数据库的创建和管理基于SQL语言。我
 这里用的是开源SQL数据库管理软件包SQLite。
 
+## How Read the Content of This Database
+
+In your Terminal Emulator, type:
+
+sqlite3
+
+(you need to make sure that sqlite3 has been installed in your OS).
+
+Then in your sqlite command prompt, to OPEN the database first,
+
+sqlite> .open PMDBcn.db
+
+To check how many and what tables are contained in this database,
+
+sqlite> .tables
+
+To check what content in Table, for example, PMAGRESULT
+
+SELECT * FROM PMAGRESULT;
+
+To check what content in Table, for example, REFERENCE
+
+SELECT * FROM REFERENCE;
+
+To EXIT from the database,
+
+sqlite> .exit
+
 ## Why Do It (创建该数据库的缘由)
 Many paleomagnetic data were published only in Chinese. So why not share them
 with a "Hello, World!".

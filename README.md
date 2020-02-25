@@ -6,7 +6,7 @@ database engine SQLite (version 3.x.x) to manage it.
 该数据库收集归纳中文文献里发表的古地磁极数据。数据库的创建和管理基于SQL语言。我
 这里用的是开源SQL数据库管理软件包SQLite。
 
-## How Read the Content of This Database
+## How to Read the Content of This Database
 
 In your Terminal Emulator, type:
 
@@ -260,7 +260,21 @@ was published. Its COLUMNS include
 
 #### ROCKUNIT
 This table contains information on the sampled rockunit, e.g. position, geology,
-age, structure. Its COLUMNS include:
+age, structure.
+
+>> A rock unit is a sequence of beds in a sedimentary sequence or cooling units
+   in an igneous complex, usually a member of a geological formation, an entire
+   formation, or even a sequence of formations. It is advisable to sample at
+   several widely separated localities (perhaps separated by as much as several
+   hundred km). This procedure avoids dependence on results from a single
+   locality and also may provide application of field tests. A single locality
+   might have been affected by undetected tectonic complications or geochemical
+   processes that have altered the ferromagnetic minerals, whereas a region is
+   less likely to have been systematically affected by these complications
+   (Butler, 1992, PALEOMAGNETISM: Magnetic Domains to Geologic Terranes, Chapter
+   4).
+
+Its COLUMNS include:
 
 * REFNO (link with REFERENCE table),
 

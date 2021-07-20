@@ -200,9 +200,9 @@ include
 
 * COMMENTS:
 
-  * COMMENTS (General information including details of the origin of MAGAGE.
-    If the result is a combined pole this field contains information on the data
-    included in the combined result)
+  * COMMENTS (General information including details of the origin of LOMAGAGE
+    and HIMAGAGE, local rotations. If the result is a combined pole this field
+    contains information on the data included in the combined result)
 
   * STATUS (Indicates if results have been superseded). Notes on the status of
     the result:
